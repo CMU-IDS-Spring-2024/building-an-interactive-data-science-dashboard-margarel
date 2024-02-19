@@ -117,28 +117,18 @@ race_bar_chart = alt.Chart(race_counts).mark_bar().encode(
 
 st.write(race_bar_chart)
 
-##############3
-#sorted(df['combined_od1'].unique())
 
-# Count occurrences of each drug
-drug_counts = filter_df['combined_od1'].value_counts().reset_index()
-drug_counts.columns = ['Drug', 'Count']
+# drug_counts = filter_df['combined_od1'].value_counts().reset_index()
+# drug_counts.columns = ['Drug', 'Count']
+# top_10_drugs = drug_counts.head(10)
+# top_10_drugs = top_10_drugs.sort_values(by='Count', ascending=False)
+# top_10_drugs_chart = alt.Chart(top_10_drugs).mark_bar().encode(
+#     x=alt.X('Drug:N', sort='-y'),
+#     y='Count:Q'
+# ).properties(
+#     title='Top 10 Most Used Drugs',
+#     width=600,
+#     height=400
+# )
 
-# Select the top 10 drugs
-top_10_drugs = drug_counts.head(10)
-
-# Sort the top 10 drugs by count in descending order
-top_10_drugs = top_10_drugs.sort_values(by='Count', ascending=False)
-
-# Create a bar chart using Altair
-top_10_drugs_chart = alt.Chart(top_10_drugs).mark_bar().encode(
-    x=alt.X('Drug:N', sort='-y'),
-    y='Count:Q'
-).properties(
-    title='Top 10 Most Used Drugs',
-    width=600,
-    height=400
-)
-
-# Display the chart
-st.write(top_10_drugs_chart)
+# st.write(top_10_drugs_chart)
