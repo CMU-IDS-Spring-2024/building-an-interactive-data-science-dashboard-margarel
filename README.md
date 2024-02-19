@@ -14,3 +14,17 @@ Through a series of assignments, you will build out a dashboard to support the i
 ## Running the Streamlit app
 
 You can execute the Streamlit app by running `streamlit run County_Dashboard.py`
+
+---
+
+## Assignment 3A Questions
+1. **Did you notice any interesting patterns or trends in the dataset?**
+   1. Overall, there are a few patterns present in the dataset such as: sudden spike of fatal accidents from overdoses in the years 2016 and 2017; most of the overdoses are roughly between early 30s to late 50s; and more than double of the overdose cases are male.
+2. **Was it possible to understand how the dataset was different in the earlier years versus the more recent years? If so, what were some differences? If not, how would you suggest changing the dashboard to make differences easier to find?**
+   1. Initially, you can tell that there is a spike in cases around 2016 and 2017 where overdose cases more than doubled in count, but nothing exactly points to a change in data collection. If there is a difference in the data, one way to dictate the change in data would be to have another parameter (column) that showcases more information.
+3. **Did you discover any filters that demonstrated big differences from the overall dataset among the demographics (such as age, race, or gender)?**
+   1. By going through the primary drugs, there were a few interesting deviations. 
+   Fentanyl is considered a more recent drug as most of overdose cases started increasing after 2019. While there were some cases of fentanyl overdoses in 2016 and 2017, when there was a highest quantity of overdoses, most of the cases are more recent with 342 overdose cases in 2021.
+   Alcohol on the other hand, had more overdose cases before 2019 with 161 incidents in 2017. The average age range is higher than the general population as well with most of the cases being roughly 50 years old while fentanyl's age range was roughly people in their 30s.
+4. **Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?**
+   1. Due to the large amount of unique drugs, another way to find information would be to have a top used drugs and users can test the difference among the different drugs (i.e. discover information such as fentanyl being a relatively new drug that is common to accidentally overdose on in comparison to other drugs such as heroin or alcohol).
