@@ -28,3 +28,13 @@ You can execute the Streamlit app by running `streamlit run County_Dashboard.py`
    Alcohol on the other hand, had more overdose cases before 2019 with 161 incidents in 2017. The average age range is higher than the general population as well with most of the cases being roughly 50 years old while fentanyl's age range was roughly people in their 30s.
 4. **Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?**
    1. Due to the large amount of unique drugs, another way to find information would be to have a top used drugs and users can test the difference among the different drugs (i.e. discover information such as fentanyl being a relatively new drug that is common to accidentally overdose on in comparison to other drugs such as heroin or alcohol).
+
+---
+
+## Assignment 3B Questions
+1. **Did you notice any interesting patterns or trends in the dataset?**
+   1. In comparison to the previous assignment, it was easier to discover what drugs were most popular during what time period as that was the main purpose. It made it easier to understand what was the main cause of fatal accidents. With this setup, it was easier to see patterns and/or a timeline of drug usage (ie. cocaine, alcohol, fentanyl being the most prominent in usage as the years go on and also cases of alprazolam and heroin throughout the years).
+2. **Was it possible to understand how the dataset was different in the earlier years versus the more recent years? If so, what were some differences? If not, how would you suggest changing the dashboard to make differences easier to find?**
+   1. Yes, it was possible with the dataset to understand how earlier years had different fatal drug overdoses in comparison to more recent years (such as cocaine and alcohol being more present in the earlier years while fentanyl being more present in cases in the more recent years by more than 100+ cases). However, it doesn't showcase whether or not there was a difference in data collection.
+3. **Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?**
+   1. Looking at the rest of the data, it would be helpful to understand where the cases are coming from and whether or not there is a pattern in location. This could reveal which specific areas have access to what type of drugs and what areas are more concentrated in fatal overdoses.
