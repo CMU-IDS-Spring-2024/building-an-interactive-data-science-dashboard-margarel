@@ -43,8 +43,8 @@ You can execute the Streamlit app by running `streamlit run County_Dashboard.py`
 
 ## Assignment 3C Questions
 1. **Did you notice any interesting patterns or trends in the dataset?**
-   1. 
+   1. There is a high concentration of overdose cases in the downtown Pittsburgh area that was hard to decipher in previous assignments. You can see the clear trend of overdose cases in a specific area, which may lead to insights related to population size and/or ease of access. The more outside the main city, the smaller the dots are, which means that there are less cases.
 2. **Was it possible to understand how the dataset was different in the earlier years versus the more recent years? If so, what were some differences?  If not, how would you suggest changing the dashboard to make differences easier to find?**
-   1. 
+   1. In this iteration, it is easy to see where most of the accidental overdose cases are located. In the early years, number 1, there weren't as many cases to begin with, and number 2, a lot of the later cases are more in quantity and more dense near the major city. This interaction made it easier to discover the differences between early years versus the later years.
 3. **Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?**
-   1. 
+   1. If there was a future iteration, I would like to see it mapped to the actual zipcode lines to see the zipcode region specifically. In the current iteration, it is still clear to note which city has more overdose cases, but I personally believe that if the data had the geographic outline of the zipcode, it would be easier to discern which region has a higher overdose rate.
