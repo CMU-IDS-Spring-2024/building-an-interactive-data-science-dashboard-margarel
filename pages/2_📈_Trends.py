@@ -43,7 +43,7 @@ top_drugs = drug_counts.head(num_drugs)
 st.subheader("Visualizations")
 
 # Number of incidents for each drug each year
-drug_year_counts = filtered_df.groupby([filtered_df["death_date_and_time"].dt.year, "combined_od1"]).size().reset_index(name="count")
+drug_year_counts = filtered_df.groupby([filtered_df["death_date_and_time"].dt.year, "combined_od1"]).size().reset_index(name = "count")
 
 charts = []
 max_count = drug_year_counts["count"].max()
@@ -52,14 +52,16 @@ for drug in top_drugs["Drug"]:
     drug_data = drug_year_counts[drug_year_counts["combined_od1"] == drug]
     
     chart = alt.Chart(drug_data).mark_area().encode(
-        x=alt.X("death_date_and_time:O", title="Fatal Overdoses per Year"),
+        x = alt.X("death_date_and_time:O", title = "Fatal Overdoses per Year"),
         # y=alt.Y("count:Q", title="Count"), # Without the same y-axis
-        y=alt.Y("count:Q", title="Count", scale=alt.Scale(domain=(0, max_count), nice=False)), # With the same y-axis
-        color=alt.Color("combined_od1:N", legend=None),
+        y = alt.Y("count:Q", title = "Count", scale = alt.Scale(domain = (0, max_count), nice = False)), # With the same y-axis
+        color = alt.Color("combined_od1:N", legend = None),
+        # row = alt.Row("count:Q", title = "Count", header = alt.Header(labelAngle = 0)),
+        # column = alt.Column("death_date_and_time:O", title = "Fatal Overdoes per Year")
     ).properties(
-        width=600,
-        height=100,
-        title=drug
+        width = 600,
+        height = 100,
+        title = drug
     )
     
     charts.append(chart)

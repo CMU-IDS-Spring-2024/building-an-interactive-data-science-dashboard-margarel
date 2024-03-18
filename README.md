@@ -38,3 +38,13 @@ You can execute the Streamlit app by running `streamlit run County_Dashboard.py`
    1. Yes, it was possible with the dataset to understand how earlier years had different fatal drug overdoses in comparison to more recent years (such as cocaine and alcohol being more present in the earlier years while fentanyl being more present in cases in the more recent years by more than 100+ cases). However, it doesn't showcase whether or not there was a difference in data collection.
 3. **Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?**
    1. Looking at the rest of the data, it would be helpful to understand where the cases are coming from and whether or not there is a pattern in location. This could reveal which specific areas have access to what type of drugs and what areas are more concentrated in fatal overdoses.
+
+---
+
+## Assignment 3C Questions
+1. **Did you notice any interesting patterns or trends in the dataset?**
+   1. 
+2. **Was it possible to understand how the dataset was different in the earlier years versus the more recent years? If so, what were some differences?  If not, how would you suggest changing the dashboard to make differences easier to find?**
+   1. 
+3. **Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?**
+   1. 
