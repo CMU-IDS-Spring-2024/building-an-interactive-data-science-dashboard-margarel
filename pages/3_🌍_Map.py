@@ -45,37 +45,35 @@ max_cases = cases['case_count'].max()
 selected_cases = col2.slider('Select number of cases range', min_cases, max_cases, (min_cases, max_cases))
 
 # Dynamically updated size
-def sizes_change(df_cleaned, start_date, end_date):
+def sizes_change(df_cleaned, start_date, end_date, min_cases, max_cases):
     filtered_data = df_cleaned[(df_cleaned['death_date_and_time'] >= start_date) & (df_cleaned['death_date_and_time'] <= end_date)]
-
+    
     cases = filtered_data.groupby("incident_zip").size().reset_index(name = "case_count")
 
-    sizes = cases['case_count'].tolist()
-    sizes = [count ** 2 for count in cases['case_count']]
+    filtered_data = pd.merge(filtered_data, cases, how = "outer", left_on = "incident_zip", right_on = "incident_zip")
+    
 
-    return sizes
+    filtered_data = filtered_data[(filtered_data['case_count'] >= min_cases) & (filtered_data['case_count'] <= max_cases)]
+    filtered_data['case_count'] = filtered_data['case_count'].apply(lambda x: x * 10)
 
-
-print(sizes_change(df_cleaned, sel_time[0], sel_time[1]))
-
-
+    return filtered_data
 
 
+# print(sizes_change(df_cleaned, sel_time[0], sel_time[1]))
 
 
 st.subheader("Map")
 
-red = 255
-green = 0
-blue = 0
-alpha = 0.25
+# red = 255
+# green = 0
+# blue = 0
+# alpha = 0.25
 
-color = (red, green, blue, alpha)
+# color = (red, green, blue, alpha)
 
-st.map(df_cleaned, 
-    #    latitude = "LAT",
-    #    longitude = "LON",
-       color = color,
-       size = sizes_change(df_cleaned, sel_time[0], sel_time[1]),
-    #    size = 2000,
+df_new = sizes_change(df_cleaned, sel_time[0], sel_time[1], selected_cases[0], selected_cases[1])
+print(df_new)
+st.map(df_new, 
+       color = "#ff000002",
+       size = "case_count",
        use_container_width = True)
